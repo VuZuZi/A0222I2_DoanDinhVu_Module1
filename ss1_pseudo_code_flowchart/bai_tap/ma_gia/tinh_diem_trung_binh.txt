@@ -1,0 +1,5 @@
+Begin
+	Input T,L,H
+	Sum= (T+L+H)/3
+	Output Sum
+End

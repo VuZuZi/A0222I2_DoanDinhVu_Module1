@@ -1,0 +1,8 @@
+Begin
+	N là số tự nhiên từ 0-9
+	Input M
+	IF (N==M)
+		Output "đúng"
+	Eles
+		Output "sai"
+End

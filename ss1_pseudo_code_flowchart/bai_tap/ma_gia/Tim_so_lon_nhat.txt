@@ -1,0 +1,13 @@
+Begin
+	Input A,B,C
+	if (A>B)
+		if(A>C)
+		output A la so lon nhat
+		else
+		output C la so lan nhat
+	else
+		if(b>c)
+		output B la so lon nhat
+		else
+		output C la so lon nhat
+End
