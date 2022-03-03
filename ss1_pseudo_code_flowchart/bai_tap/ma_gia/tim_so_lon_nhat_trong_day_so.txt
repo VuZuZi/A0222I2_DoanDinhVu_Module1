@@ -1,0 +1,11 @@
+Begin
+	Input N,ai
+		While(i<=N)
+		Max=a1
+		If(Max>ai)
+		i=i+1
+		else
+		max=ai
+		i=i+1
+	Display Max
+End 
