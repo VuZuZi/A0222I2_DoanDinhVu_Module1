@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi tiền tệ</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>amount</th>
+        <th>From currency</th>
+        <th>To Currency</th>
+    </tr>
+    <tr>
+        <td><input type="number" id="input"></td>
+        <td>
+            <select id="select1">
+                <option value="vn">VND</option>
+                <option value="us">USA</option>
+            </select>
+        </td>
+        <td>
+            <select id="select2">
+                <option value="vn">VND</option>
+                <option value="us">USA</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td>
+        <input type="submit" onclick="cal()">
+        </td>
+    </tr>
+</table>
+</body>
+<script>
+    function cal(){
+        let a = document.getElementById("input").value;
+        let b = document.getElementById("select1").value;
+        let c = document.getElementById("select2").value;
+        var d;
+        if(b==c){
+            let d = document.getElementById("input").value;
+            alert(d);
+        }
+        else {
+            if (b!=c){
+                if (b=="vn"){
+                    d=a/23000
+                    alert(d)
+                }
+                else {
+                    d=a*23000
+                    alert(d)
+                }
+            }
+        }
+
+    }
+</script>
+</html>

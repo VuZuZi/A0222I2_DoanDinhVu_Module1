@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển Thị Đầu ra</title>
+</head>
+<body>
+<button type="button" onclick="showM();">click</button>
+<script>
+    function showM(){
+        alert('Thông báo của bài tập 1!')
+    }
+</script>
+<div id="msd"></div>
+<button type="button" onclick="show2()">BT2</button>
+<script>
+    function show2(){
+        document.getElementById('msd').innerHTML = 'Thông báo của bài tập 2';
+    }
+</script><br>
+<button type="button" onclick="show3()">BT3</button>
+<script>
+    function show3(){
+        document.write('Thông báo của bài tập 3');
+    }
+</script>
+<br>
+<button type="button" onclick="show4();">Bt4</button>
+<script>
+    function show4(){
+        console.log('Thông báo của bài tập 4');
+    }
+</script>
+
+</body>
+</html>
