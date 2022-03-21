@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính Năm Nhuận</title>
+</head>
+<body>
+<SCRIPT>
+    let x=parseInt(prompt("nhập năm "))
+    if(x%4==0 && x%100 !==0){
+        alert(x+ " là năm nhuận")
+    }else if (x%100==0 && x%400 !==0){
+        alert(x+" không phải là năm nhuận")
+    } else if (x%100==0&&x%400==0){
+        alert(x+" là năm nhuận")
+    }else alert(x+" không phải là năm nhuận")
+</SCRIPT>
+</body>
+</html>

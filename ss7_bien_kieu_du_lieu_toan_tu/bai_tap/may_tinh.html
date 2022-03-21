@@ -7,14 +7,53 @@
 <body>
 <table>
     <tr>
-        <td>
-            <input type="number">
-            <input type="number">
+        <td colspan="2">
+            <input type="number" id="nb1">
+
+        </td>
+        <td colspan="2">
+            <input type="number" id="nb2">
+
         </td>
     </tr>
     <tr>
-        
+        <td> <input type="button" name="c" value="cộng +" onclick="s1()"></td>
+        <td> <input type="button" name="t" value="trừ -" onclick="s2()"></td>
+        <td> <input type="button" name="n" value="nhân *" onclick="s3()"></td>
+        <td> <input type="button" name="ch" value="chia /" onclick="s4()"></td>
+
     </tr>
 </table>
+
+<script>
+
+    function s1(){
+      let a =parseInt(document.getElementById("nb1").value)
+      let b =parseInt(document.getElementById("nb2").value)
+      let c = a + b
+        alert(c)
+    }
+    function s2(){
+        let a =parseInt(document.getElementById("nb1").value)
+        let b =parseInt(document.getElementById("nb2").value)
+        let c = a - b
+        alert(c)
+    }
+    function s3(){
+        let a =parseInt(document.getElementById("nb1").value)
+        let b =parseInt(document.getElementById("nb2").value)
+        let c = a * b
+        alert(c)
+
+    }
+    function s4(){
+        let a =parseInt(document.getElementById("nb1").value)
+        let b =parseInt(document.getElementById("nb2").value)
+        let c = a / b
+        alert(c)
+
+    }
+
+</script>
 </body>
 </html>

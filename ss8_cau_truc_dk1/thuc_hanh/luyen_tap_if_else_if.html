@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>nhập thông tin</title>
+</head>
+<body>
+<script>
+    let x=prompt("Your Name?")
+
+    if(x=='admin'){
+        let y= prompt('your password?')
+        if (y==='TheMaster'){
+            alert('wellcome')
+        }else {
+           if (y==='null'){
+               alert("Canceled")
+           }else {
+               alert('Wrong password')
+           }
+        }
+    }else {
+        if(x=='null'){
+            alert('canceld')
+        }else {
+            alert("I don't know you")
+        }
+
+    }
+</script>
+</body>
+</html>
