@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Click chuột</title>
+</head>
+<body>
+<div>
+
+    <img src="https://bizweb.dktcdn.net/100/348/336/products/img-e1827.png?v=1634313786940" width="150"
+         id="bong">
+        <br>
+            <button id="click" value="click" onclick="moveright()">Click Me !</button>
+
+</div>
+<script>
+    var imgobj = document.getElementById('bong')
+    function start(){
+        // imgobj = document.getElementById('bong')
+        imgobj.style.position = 'relative'
+        imgobj.style.left = '0px'
+    }
+     var img=document.getElementById('bong')
+
+    function moveright(){
+        img.style.left = parseInt(img.style.left) +10 +'px'
+    }
+    window.onload=start;
+</script>
+</body>
+</html>
