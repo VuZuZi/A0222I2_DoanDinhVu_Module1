@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy tính cơ bản</title>
+</head>
+<body>
+<table>
+
+    <tr>
+        <td colspan="4">
+            <input type="number" id="input" value="0" style="right: auto">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="so(1)" value="1">1</button>
+        </td>
+        <td>
+            <button onclick="so(2)" >2</button>
+        </td>
+        <td>
+            <button onclick="so(3)" >3</button>
+        </td>
+        <td>
+            <button onclick="so(11)" >+</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="so(4)">4</button>
+        </td>
+        <td>
+            <button onclick="so(5)">5</button>
+        </td>
+        <td>
+            <button onclick="so(6)">6</button>
+        </td>
+        <td>
+            <button onclick="so(12)">-</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="so(7)">7</button>
+        </td>
+        <td>
+            <button onclick="so(8)">8</button>
+        </td>
+        <td>
+            <button onclick="so(9)">9</button>
+        </td>
+        <td>
+            <button onclick="so(13)">*</button>
+        </td>
+    </tr>
+</table>
+<script>
+
+    let chay=document.getElementById('input').value;
+    chay = "";
+    function so(x) {
+    switch (x){
+        case 1: chay = chay +"1"
+            document.getElementById('input').value = chay;break;
+        case 2: chay = chay +"2"
+            document.getElementById('input').value = chay;break;
+        case 3: chay = chay +"3"
+            document.getElementById('input').value = chay;break;
+        case 4: chay = chay +"4"
+            document.getElementById('input').value = chay;break;
+        case 5: chay = chay +"5"
+            document.getElementById('input').value = chay;break;
+        case 6: chay = chay +"6"
+            document.getElementById('input').value = chay;break;
+        case 7: chay = chay +"7"
+            document.getElementById('input').value = chay;break;
+        case 8: chay = chay +"8"
+            document.getElementById('input').value = chay;break;
+        case 9: chay = chay +"9"
+            document.getElementById('input').value = chay;break;
+        case 11: chay = chay +"+"
+            document.getElementById('input').value = chay;break;
+        case 12: chay = chay +"-"
+            document.getElementById('input').value = chay;break;
+        case 13: chay = chay +"*"
+            document.getElementById('input').value = chay;break;
+    }
+    }
+</script>
+</body>
+</html>
+
+<!--<body>-->
+<!--<table border="1" style="border-color: black;">-->
+<!--    <tr>-->
+<!--        <td colspan="4"><input type="text" readonly style="width: 410px;text-align: right" id="input" value="0"></td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td><input type="button" onclick="play(1)" value="1"/></td>-->
+<!--        <td><input type="button"  onclick="play(2)" value="2"/></td>-->
+<!--        <td><input type="button"  onclick="play(3)" value="3"/></td>-->
+<!--        <td><input type="button"  onclick="play('add')" value="+"/></td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td><input type="button" onclick="play(4)" value="4"/></td>-->
+<!--        <td><input type="button" onclick="play(5)" value="5"/></td>-->
+<!--        <td><input type="button" onclick="play(6)" value="6"/></td>-->
+<!--        <td><input type="button" onclick="play('sub')" value="-"/></td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td><input type="button" onclick="play(7)" value="7"/></td>-->
+<!--        <td><input type="button" onclick="play(8)" value="8"/></td>-->
+<!--        <td><input type="button" onclick="play(9)" value="9"/></td>-->
+<!--        <td><input type="button" onclick="play('mul')" value="*"/></td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td><input type="button" onclick="play('clear')" value="C"/></td>-->
+<!--        <td><input type="button" onclick="play(0)" value="0"/></td>-->
+<!--        <td><input type="button" style="background-color: blue" onclick="play('run');" value="="/></td>-->
+<!--        <td><input type="button" onclick="play('div')" value="/"/></td>-->
+<!--    </tr>-->
+<!--</table>-->
+<!--<script>-->
+<!--    let cal = document.getElementById('input').value;-->
+<!--    cal = "";-->
+<!--    function play(t) {-->
+<!--        switch (t) {-->
+<!--            case 1 : cal = cal + "1";document.getElementById('input').value = cal;break;-->
+<!--            case 2 : cal = cal + "2";document.getElementById('input').value = cal;break;-->
+<!--            case 3 : cal = cal + "3";document.getElementById('input').value = cal;break;-->
+<!--            case 4 : cal = cal + "4";document.getElementById('input').value = cal;break;-->
+<!--            case 5 : cal = cal + "5";document.getElementById('input').value = cal;break;-->
+<!--            case 6 : cal = cal + "6";document.getElementById('input').value = cal;break;-->
+<!--            case 7 : cal = cal + "7";document.getElementById('input').value = cal;break;-->
+<!--            case 8 : cal = cal + "8";document.getElementById('input').value = cal;break;-->
+<!--            case 9 : cal = cal + "9";document.getElementById('input').value = cal;break;-->
+<!--            case 0 : cal = cal + "0";document.getElementById('input').value = cal;break;-->
+<!--            case 'add' : cal = cal + "+";document.getElementById('input').value = cal;break;-->
+<!--            case 'sub' : cal = cal + "-";document.getElementById('input').value = cal;break;-->
+<!--            case 'mul' : cal = cal + "*";document.getElementById('input').value = cal;break;-->
+<!--            case 'div' : cal = cal + "/";document.getElementById('input').value = cal;break;-->
+<!--            case 'clear' : cal = 0;document.getElementById('input').value = cal;break;-->
+<!--            case 'run' : cal=eval(cal);document.getElementById('input').value=cal;-->
+<!--        }-->
+
+<!--    }-->
+<!--</script>-->

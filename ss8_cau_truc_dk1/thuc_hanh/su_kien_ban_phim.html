@@ -1,10 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Di Chuyển Nobita</title>
 </head>
-<body>
-$END$
+<body onload="start()">
+<img src="/ss9_cau_truc_dk2/anh-nobita-6-1.png" width="150px" id="nbt" style="position: relative;left:0; top:0;";><br>
+<script>
+    // var img=document.getElementById('nbt')
+    // function start(){
+    // img.style.position = 'relative'
+    // img.style.left='0px'
+    // img.style.right='0px'
+    // }
+    function len() {
+        var img = document.getElementById('nbt')
+        img.style.top = parseInt(img.style.top) - 5 + 'px'
+    }
+
+    function xuong() {
+        var img = document.getElementById('nbt');
+        img.style.top = parseInt(img.style.top) + 5 + 'px'
+    }
+
+    function trai() {
+        var img = document.getElementById('nbt')
+
+        img.style.left = parseInt(img.style.left) - 5 + 'px';
+    }
+
+    function phai() {
+        var img = document.getElementById('nbt')
+        img.style.left = parseInt(img.style.left) + 5 + 'px'
+    }
+
+    function chay(evt) {
+        switch (evt.keyCode) {
+            case 37:
+
+                trai();
+                break;
+            case 39:
+                phai();
+                break;
+            case 38:
+                len();
+                break;
+            case 40:
+                xuong();
+                break;
+        }
+    }
+
+    function start() {
+        window.addEventListener('keydown', chay)
+    }
+</script>
 </body>
 </html>

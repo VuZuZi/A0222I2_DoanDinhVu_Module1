@@ -1,10 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Tính BMI</title>
 </head>
 <body>
-$END$
+<script>
+    let cao = parseFloat(prompt('Nhập Chiều cao (M)'))
+    let nang = parseInt(prompt('Nhập cân nặng (Kg)'))
+    let cao2= cao*cao
+    let BMI = nang/cao2
+    if (BMI<18.5){
+        alert('Tóm')
+
+    }else if (BMI<25){
+        alert('Bình Thường')
+
+    }
+    else if (BMI<30){
+        alert('Béo')
+    }else {
+        alert('OverSize')
+    }
+</script>
 </body>
 </html>
