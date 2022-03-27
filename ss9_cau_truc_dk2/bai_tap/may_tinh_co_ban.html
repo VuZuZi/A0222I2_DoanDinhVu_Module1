@@ -3,95 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <title>Máy tính cơ bản</title>
+    <style>
+        input {
+            width: 97%;
+            
+        }
+    </style>
+    <link rel="stylesheet" href="may_tinh.css">
 </head>
 <body>
-<table>
+<table id="ten" width="300px" border="1px"  style="background-color: #666666; ">
 
     <tr>
-        <td colspan="4">
-            <input type="number" id="input" value="0" style="right: auto">
-        </td>
+        <td colspan="4"><input type="text" value="0" id="ht" style="text-align: right ; size: 298px"></td>
     </tr>
     <tr>
         <td>
             <button onclick="so(1)" value="1">1</button>
         </td>
         <td>
-            <button onclick="so(2)" >2</button>
+            <button onclick="so(2)" value="2">2</button>
         </td>
         <td>
-            <button onclick="so(3)" >3</button>
+            <button onclick="so(3)" value="3">3</button>
         </td>
         <td>
-            <button onclick="so(11)" >+</button>
+            <button onclick="so('c')" value="+">+</button>
         </td>
+
+
     </tr>
     <tr>
         <td>
-            <button onclick="so(4)">4</button>
+            <button onclick="so(4)" value="1">4</button>
         </td>
         <td>
-            <button onclick="so(5)">5</button>
+            <button onclick="so(5)" value="2">5</button>
         </td>
         <td>
-            <button onclick="so(6)">6</button>
+            <button onclick="so(6)" value="3">6</button>
         </td>
         <td>
-            <button onclick="so(12)">-</button>
+            <button onclick="so('t')" value="-">-</button>
+
         </td>
+
+
     </tr>
     <tr>
         <td>
-            <button onclick="so(7)">7</button>
+            <button onclick="so(7)" value="7">7</button>
         </td>
         <td>
-            <button onclick="so(8)">8</button>
+            <button onclick="so(8)" value="8">8</button>
         </td>
         <td>
-            <button onclick="so(9)">9</button>
+            <button onclick="so(9)" value="9">9</button>
         </td>
         <td>
-            <button onclick="so(13)">*</button>
+            <button onclick="so('n')" value="*">*</button>
+
         </td>
+
+
     </tr>
+    <tr>
+        <td>
+            <button onclick="so('del')">c</button>
+        </td>
+        <td>
+            <button onclick="so(10)">0</button>
+        </td>
+        <td style="color: yellow; background-color: #A00000">
+            <button onclick="so('b')">=</button>
+        </td>
+        <td>
+            <button onclick="so('ch')">/</button>
+        </td>
+
+    </tr>
+
 </table>
 <script>
+    let mh;
+    mh = document.getElementById('ht').value=null;
 
-    let chay=document.getElementById('input').value;
-    chay = "";
     function so(x) {
-    switch (x){
-        case 1: chay = chay +"1"
-            document.getElementById('input').value = chay;break;
-        case 2: chay = chay +"2"
-            document.getElementById('input').value = chay;break;
-        case 3: chay = chay +"3"
-            document.getElementById('input').value = chay;break;
-        case 4: chay = chay +"4"
-            document.getElementById('input').value = chay;break;
-        case 5: chay = chay +"5"
-            document.getElementById('input').value = chay;break;
-        case 6: chay = chay +"6"
-            document.getElementById('input').value = chay;break;
-        case 7: chay = chay +"7"
-            document.getElementById('input').value = chay;break;
-        case 8: chay = chay +"8"
-            document.getElementById('input').value = chay;break;
-        case 9: chay = chay +"9"
-            document.getElementById('input').value = chay;break;
-        case 11: chay = chay +"+"
-            document.getElementById('input').value = chay;break;
-        case 12: chay = chay +"-"
-            document.getElementById('input').value = chay;break;
-        case 13: chay = chay +"*"
-            document.getElementById('input').value = chay;break;
-    }
-    }
-</script>
-</body>
-</html>
+        switch (x) {
+            case 1:
+                mh = mh + "1";
+                document.getElementById('ht').value = mh;
+                break;
+            case 2:
+                mh = mh + "2";
+                document.getElementById('ht').value = mh;
+                break;
+            case 3:
+                mh = mh + "3";
+                document.getElementById('ht').value = mh;
+                break;
+            case 4:
+                mh = mh + "4";
+                document.getElementById('ht').value = mh;
+                break;
+            case 5:
+                mh = mh + "5";
+                document.getElementById('ht').value = mh;
+                break;
+            case 6:
+                mh = mh + "6";
+                document.getElementById('ht').value = mh;
+                break;
+            case 7:
+                mh = mh + "7";
+                document.getElementById('ht').value = mh;
+                break;
+            case 8:
+                mh = mh + "8";
+                document.getElementById('ht').value = mh;
+                break;
+            case 9:
+                mh = mh + "9";
+                document.getElementById('ht').value = mh;
+                break;
+            case 10:
+                mh = mh + "0";
+                document.getElementById('ht').value = mh;
+                break;
+            case 'c':
+                mh = mh + "+";
+                document.getElementById('ht').value = mh;
+                break;
+            case 't' :
+                mh = mh + "-";
+                document.getElementById('ht').value = mh;
+                break;
+            case 'n':
+                mh = mh + "*";
+                document.getElementById('ht').value = mh;
+                break;
+            case 'ch' :
+                mh = mh + "/";
+                document.getElementById('ht').value = mh;
+                break;
+            case 'del':
+                mh = '0';
+                document.getElementById('ht').value = mh;
+                break;
 
-<!--<body>-->
+            case 'b':
+                mh = eval(mh);
+                document.getElementById('ht').value = mh;
+                break;
+        }
+    }
+
+</script>
+
 <!--<table border="1" style="border-color: black;">-->
 <!--    <tr>-->
 <!--        <td colspan="4"><input type="text" readonly style="width: 410px;text-align: right" id="input" value="0"></td>-->
@@ -140,9 +208,12 @@
 <!--            case 'sub' : cal = cal + "-";document.getElementById('input').value = cal;break;-->
 <!--            case 'mul' : cal = cal + "*";document.getElementById('input').value = cal;break;-->
 <!--            case 'div' : cal = cal + "/";document.getElementById('input').value = cal;break;-->
-<!--            case 'clear' : cal = 0;document.getElementById('input').value = cal;break;-->
 <!--            case 'run' : cal=eval(cal);document.getElementById('input').value=cal;-->
 <!--        }-->
 
 <!--    }-->
 <!--</script>-->
+</body>
+</html>
+
+

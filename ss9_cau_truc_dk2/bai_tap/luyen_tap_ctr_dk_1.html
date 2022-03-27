@@ -5,119 +5,120 @@
     <title>Luyện tập cấu trúc điều kiện 1</title>
 </head>
 <body>
-<!--Bài 1-->
-<!--<script>-->
-<!--    let a = parseInt(prompt('Nhập số a'))-->
-<!--    let b = parseInt(prompt('nhập số b'))-->
-<!--    let c = a%b-->
-<!--    if (c==0){-->
-<!--        alert(a + ' chia hết cho '+ b)-->
-<!--    }-->
-<!--    else {-->
-<!--        alert(a + ' không chia hết cho '+ b)-->
-<!--    }-->
-<!--</script>-->
-<!--<h1>Bài 2</h1>-->
-<!--<script>-->
-<!--    let a = parseInt(prompt('nhập tuổi học sinh'))-->
-<!--    if (a<16){-->
-<!--        document.write('học sinh chưa đủ tuổi vào lớp 10')-->
+Bài 1
+<script>
+    let a = parseInt(prompt('Nhập số a'))
+    let b = parseInt(prompt('nhập số b'))
+    let c = a % b
+    if (c === 0) {
+        alert(a + ' chia hết cho ' + b)
+    } else {
+        alert(a + ' không chia hết cho ' + b)
+    }
+</script>
+<h1>Bài 2</h1>
+<script>
+    let a = parseInt(prompt('nhập tuổi học sinh'))
+    if (a < 16) {
+        document.write('học sinh chưa đủ tuổi vào lớp 10')
 
-<!--    }else {-->
-<!--        document.write('học sinh đã đủ tuổi vào lớp 10')-->
-<!--    }-->
-<!--</script>-->
-<!--<h1>bài 3</h1>-->
-<!--<SCRIPT>-->
-<!--    let a = prompt('nhập một số nguyên')-->
-<!--    if (a<0){-->
-<!--        alert(a + ' < 0')-->
+    } else {
+        document.write('học sinh đã đủ tuổi vào lớp 10')
+    }
+</script>
+<h1>bài 3</h1>
+<SCRIPT>
+    let a = prompt('nhập một số nguyên')
+    if (a < 0) {
+        alert(a + ' < 0')
 
-<!--    }else if (a>0){-->
-<!--        alert(a+'>0')-->
-<!--    }else {-->
-<!--        alert(a+"=0")-->
-<!--    }-->
-<!--</SCRIPT>-->
-<!--<h1>bài 4</h1>-->
-<!--<SCRIPT>-->
-<!--    let a=prompt('nhập số thứ nhất')-->
-<!--    let b=prompt('nhập số thứ 2')-->
-<!--    let c=prompt('nhập số thứ 3')-->
-<!--    if (a>b&&a>c){-->
-<!--        alert(a+' là số lớn nhất')-->
-<!--    }else  if (c>b&&c>b){-->
-<!--        alert(c+' là số lớn nhất')}-->
-<!--    else {-->
-<!--        alert(b+ ' là số lớn nhất')-->
-<!--    }-->
-<!--</SCRIPT>-->
-<!--<h1>bài 5</h1>-->
-<!--<script>-->
-<!--    let a=parseFloat(prompt('Nhập điểm kiểm tra'))-->
-<!--    let b=parseFloat(prompt('Nhập điểm cuối kì'))-->
-<!--    let c=parseFloat(prompt('Nhập điểm giữa kì'))-->
-<!--    let d=a+b+c-->
-<!--    let e = d / 3-->
-<!--    if (e>=8.5){-->
-<!--        alert(e+' là HSG')-->
-<!--    }else if (e>=6.5){-->
-<!--        alert(e+' là HSTT')-->
-<!--    }else if (e>=5){-->
-<!--        alert(e+' là HSTB')-->
-<!--    }else {-->
-<!--        alert('HSY')-->
-<!--    }-->
+    } else if (a > 0) {
+        alert(a + '>0')
+    } else {
+        alert(a + "=0")
+    }
+</SCRIPT>
+<h1>bài 4</h1>
+<SCRIPT>
+    let a = prompt('nhập số thứ nhất');
+    let b = prompt('nhập số thứ 2');
+    let c = prompt('nhập số thứ 3');
+    if (a > b && a > c) {
+        alert(a + ' là số lớn nhất');
+    } else if (c > b && c > b) {
+        alert(c + ' là số lớn nhất');
+    } else {
+        alert(b + ' là số lớn nhất');
+    }
+</SCRIPT>
+<h1>bài 5</h1>
+<script>
+    let a = parseFloat(prompt('Nhập điểm kiểm tra'));
+    let b = parseFloat(prompt('Nhập điểm cuối kì'));
+    let c = parseFloat(prompt('Nhập điểm giữa kì'));
+    let d = a + b + c
+    let e = d / 3
+    if (e >= 8.5) {
+        alert(e + ' là HSG')
+    } else if (e >= 6.5) {
+        alert(e + ' là HSTT')
+    } else if (e >= 5) {
+        alert(e + ' là HSTB')
+    } else {
+        alert('HSY')
+    }
 
-<!--</script>-->
-<!--<h1>Bài 6</h1>-->
-<!--<SCRIPT>-->
-<!--    let a = parseInt(prompt('nhập tổng doanh thu *1000'))-->
-<!--    if (a>=10){-->
-<!--        alert("hoa hồng là 2tr")-->
-<!--    }else if (a>=5) {-->
-<!--        alert('Hoa hông là 1tr')-->
-<!--    }else if (a>=2){-->
-<!--        alert('hoa hồng là 500k')-->
-<!--    }else {alert('khồng có hoa hồng')}-->
-<!--</SCRIPT>-->
+</script>
+<h1>Bài 6</h1>
+<SCRIPT>
+    let a = parseInt(prompt('nhập tổng doanh thu *1000'))
+    if (a >= 10) {
+        alert("hoa hồng là 2tr")
+    } else if (a >= 5) {
+        alert('Hoa hông là 1tr')
+    } else if (a >= 2) {
+        alert('hoa hồng là 500k')
+    } else {
+        alert('khồng có hoa hồng')
+    }
+</SCRIPT>
 <h1>Bài 7 tính cước điện thoại của một gia đình</h1>
 <h5>nhập số phút</h5>
 <input type="number" value="0" id="phut">
 <button onclick="tinh()">tính</button>
 <script>
-    function tinh(){
-    let a = document.getElementById("phut").value
-        if (a>200){
-            let c = a-200
-            let b = 115000+c*200
-                document.write(    "Cước tháng 25.000" +
+    function tinh() {
+        let a = document.getElementById("phut").value
+        if (a > 200) {
+            let c = a - 200
+            let b = 115000 + c * 200
+            document.write("Cước tháng 25.000" +
                 "50 Phút đầu *600 " +
                 "150 phút tiếp theo *400 " +
                 "sau 200 phút * 200 " +
-                "tổng = "+b
+                "tổng = " + b
             )
-        }else if (a>50){
-            let c = a-50
-            let b = 75000+c*400
-            document.write(    "Cước tháng 25.000" +
+        } else if (a > 50) {
+            let c = a - 50
+            let b = 75000 + c * 400
+            document.write("Cước tháng 25.000" +
                 "50 Phút đầu *600 " +
                 "150 phút tiếp theo *400 " +
                 "sau 200 phút * 200 " +
-                "tổng = "+b
+                "tổng = " + b
             )
-        }else if (a>0){
+        } else if (a > 0) {
             let c = a
-            let b = 25000+c*600
-            document.write(    "Cước tháng 25.000" +
+            let b = 25000 + c * 600
+            document.write("Cước tháng 25.000" +
                 "50 Phút đầu *600 " +
                 "150 phút tiếp theo *400 " +
                 "sau 200 phút * 200 " +
-                "tổng = "+b
+                "tổng = " + b
             )
-        }else {
+        } else {
             let b = 25000
-            document.write(    "Cước tháng 25.000" +
+            document.write("Cước tháng 25.000" +
                 "50 Phút đầu *600 " +
                 "150 phút tiếp theo *400 " +
                 "sau 200 phút * 200 " +
