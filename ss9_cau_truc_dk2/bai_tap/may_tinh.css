@@ -4,10 +4,19 @@ td{
     background-color: #0000aa;
 
 }
+
 button{
     text-align: center;
     width: 100%;
     color: greenyellow;
     background-color: #666666;
 
+
+}
+th{
+    background-color: #999999;
+    color: brown;
+}
+td:nth-child(4n){
+    background-color: greenyellow;
 }
