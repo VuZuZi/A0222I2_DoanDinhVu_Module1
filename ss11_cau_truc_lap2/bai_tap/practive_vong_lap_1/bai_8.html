@@ -1,10 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Game đoán số</title>
 </head>
 <body>
-$END$
+<h1>Trò chơi đoán số</h1>
+<h2>Nhập giá trị bắt đầu</h2>
+<input type="number" id="first" value="aa"><br>
+<h2>Nhập giá trị kết thúc</h2>
+<input type="number" id="end" ><br><br>
+<button onclick="start()" >Đoán</button>
+<script>
+    function start() {
+        let a = document.getElementById("first").value
+        let b = document.getElementById("end").value
+
+
+            let random = Math.floor(Math.random() * (b - a + 1) ) + a;
+        console.log(random)
+    //     for (i = 0; i < 4; i++) {
+    //         let d = parseInt(prompt('Nhập số bạn đoán'))
+    //         if (d == random) {
+    //             alert("bạn đã đoán đúng ")
+    //             break;
+    //         } else if (d < random) {
+    //             alert("cao hơn");
+    //         } else if (d > random) {
+    //             alert("thấp hơn");
+    //         }else {
+    //             i=3;
+    //             alert('hết lượt chơi')
+    //         }
+    //
+    //     }
+    }
+
+
+</script>
 </body>
 </html>

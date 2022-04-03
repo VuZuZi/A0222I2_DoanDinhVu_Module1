@@ -1,10 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Tìm giá trị trong mảng</title>
 </head>
 <body>
-$END$
+<p id="hth"></p>
+<script>
+    let x = [-10,-8,-5,-3,0,1,5,6,7,9,10]
+    // document.write(x.length)
+    let find = parseInt(prompt('nhập 1 số'))
+    for (i=0;i< x.length;i++){
+        if (x[i] == find){
+            document.write("Giá trị " +  find + "<br>"+" Ở vị trí index: " + i)
+            break;
+        }
+            }
+</script>
 </body>
 </html>

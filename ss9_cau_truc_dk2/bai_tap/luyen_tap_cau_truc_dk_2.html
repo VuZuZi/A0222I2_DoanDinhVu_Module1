@@ -5,96 +5,131 @@
     <title>Luyện tập cấu trúc điều kiện 2</title>
 </head>
 <body>
-<h1>bài 1 Chuyển độ C sang độ F</h1>
-<script>
-    let c = parseFloat(prompt('nhập độ c'))
-    let f = c*9/5+32
-    alert('độ f= '+  f )
-</script>
-<h1>bài 2 chuyển từ m sang feet</h1>
-<script>
-    let m=parseFloat(prompt('nhập số M'))
-    let f=m*3.2808
-    alert(m+'m = '+ f + 'feet')
-</script>
-<h1>bài 3 tính diện tích hình vuông</h1>
-<script>
-    let a = parseFloat(prompt('Nhập 1 cạnh của hình vuông'))
-    alert('diện tích hình vuông là '+ a*a)
-</script>
-<h1>bài 4 tính diện tích hình chữ nhật</h1>
-<script>
-    let a = parseFloat(prompt('nhập chiều dài HCN'))
-    let b = parseFloat(prompt('nhập chiều rộng HCN'))
-    alert('diện tích hình chữ nhật là '+ a*b)
-</script>
-<h1>bài 5 tính diện tích hình tam giác vuông khi biết 2 cạnh kề a và b</h1>
-<input type="number" id="d" value="nhập cạnh a">
-<input type="number" id="r" value="nhập cạnh b">
-<button onclick="tinh()">tính</button>
-<script>
-    function tinh(){
-        let a = parseFloat(document.getElementById("d").value)
-        let b = parseFloat(document.getElementById('r').value)
-            let c = (a*b)/2
-        document.write('diện tích tam giác vuông là '+c)
-    }
-</script>
-<h1>bài 6 Giải phương trình bậc 1</h1>
-<h2>Ax=B</h2>
-<input type="number" id="a" value="nhập  A">
-<input type="number" id="b" value="nhập  B">
-<button onclick="tinh()" >tính</button>
-<script>
-    function tinh(){
-        let c = parseFloat(document.getElementById("a").value)
-        let d = parseFloat(document.getElementById('b').value)
-        let e = d/c
-        document.write('nghiệm = '+e)
-    }
-</script>
-<h1>Bài 7 giải phương trình bậc 2</h1>
-<h2>Ax<sup>2</sup>+Bx+C=0</h2>
-<input type="number" id="a" value="nhập  A" placeholder="Nhập A">
-<input type="number" id="b" value="nhập  B"  placeholder="Nhập B">
-<input type="number" id="c" value="nhập  c" placeholder="Nhập C">
+<!--<h1>bài 1 Chuyển độ C sang độ F</h1>-->
+<!--<script>-->
+<!--    let c = parseFloat(prompt('nhập độ c'))-->
+<!--    let f = c*9/5+32-->
+<!--    alert('độ f= '+  f )-->
+<!--</script>-->
+<!--<h1>bài 2 chuyển từ m sang feet</h1>-->
+<!--<script>-->
+<!--    let m=parseFloat(prompt('nhập số M'))-->
+<!--    let f=m*3.2808-->
+<!--    alert(m+'m = '+ f + 'feet')-->
+<!--</script>-->
+<!--<h1>bài 3 tính diện tích hình vuông</h1>-->
+<!--<script>-->
+<!--    let a = parseFloat(prompt('Nhập 1 cạnh của hình vuông'))-->
+<!--    alert('diện tích hình vuông là '+ a*a)-->
+<!--</script>-->
+<!--<h1>bài 4 tính diện tích hình chữ nhật</h1>-->
+<!--<script>-->
+<!--    let a = parseFloat(prompt('nhập chiều dài HCN'))-->
+<!--    let b = parseFloat(prompt('nhập chiều rộng HCN'))-->
+<!--    alert('diện tích hình chữ nhật là '+ a*b)-->
+<!--</script>-->
+<!--<h1>bài 5 tính diện tích hình tam giác vuông khi biết 2 cạnh kề a và b</h1>-->
+<!--<input type="number" id="d" value="nhập cạnh a">-->
+<!--<input type="number" id="r" value="nhập cạnh b">-->
+<!--<button onclick="tinh()">tính</button>-->
+<!--<script>-->
+<!--    function tinh(){-->
+<!--        let a = parseFloat(document.getElementById("d").value)-->
+<!--        let b = parseFloat(document.getElementById('r').value)-->
+<!--            let c = (a*b)/2-->
+<!--        document.write('diện tích tam giác vuông là '+c)-->
+<!--    }-->
+<!--</script>-->
+<!--<h1>bài 6 Giải phương trình bậc 1</h1>-->
+<!--<h2>Ax=B</h2>-->
+<!--<input type="number" id="a" value="nhập  A">-->
+<!--<input type="number" id="b" value="nhập  B">-->
+<!--<button onclick="tinh()" >tính</button>-->
+<!--<script>-->
+<!--    function tinh(){-->
+<!--        let c = parseFloat(document.getElementById("a").value)-->
+<!--        let d = parseFloat(document.getElementById('b').value)-->
+<!--        let e = d/c-->
+<!--        document.write('nghiệm = '+e)-->
+<!--    }-->
+<!--</script>-->
+<!--<h1>Bài 7 giải phương trình bậc 2</h1>-->
+<!--<h2>Ax<sup>2</sup>+Bx+C=0</h2>-->
+<!--<input type="number" id="a" value="nhập  A" placeholder="Nhập A">-->
+<!--<input type="number" id="b" value="nhập  B"  placeholder="Nhập B">-->
+<!--<input type="number" id="c" value="nhập  c" placeholder="Nhập C">-->
 
-<button onclick="tinh()" >tính</button>
-<script>
+<!--<button onclick="tinh()" >tính</button>-->
+<!--<script>-->
 
-function tinh(){
-    let A= parseFloat(document.getElementById('a').value)
-    let B= parseFloat(document.getElementById('b').value)
-    let C= parseFloat(document.getElementById('c').value)
-    let dt=(B*B)-4*(A*C)
-    let nk= -B/(2*A)
-    let x1= (-B+Math.sqrt(dt))/2*A
-    let x2= (-B-Math.sqrt(dt))/2*A
+<!--function tinh(){-->
+<!--    let A= parseFloat(document.getElementById('a').value)-->
+<!--    let B= parseFloat(document.getElementById('b').value)-->
+<!--    let C= parseFloat(document.getElementById('c').value)-->
+<!--    let dt=(B*B)-4*(A*C)-->
+<!--    let nk= -B/(2*A)-->
+<!--    let x1= (-B+Math.sqrt(dt))/2*A-->
+<!--    let x2= (-B-Math.sqrt(dt))/2*A-->
 
-    if (dt<0){
-        document.write('PT vô nghiệm')
-    }else if (dt==0){
-        document.write('PT có nghiệm kép = '+ nk)
-    }else {
-        document.write('PT có 2 nghiệm = ' + x1 + ' và '+x2)
-    }
-}
-</script>
-<h1>Bài 8 xem có phải là tuổi không</h1>
+<!--    if (dt<0){-->
+<!--        document.write('PT vô nghiệm')-->
+<!--    }else if (dt==0){-->
+<!--        document.write('PT có nghiệm kép = '+ nk)-->
+<!--    }else {-->
+<!--        document.write('PT có 2 nghiệm = ' + x1 + ' và '+x2)-->
+<!--    }-->
+<!--}-->
+<!--</script>-->
+<!--<h1>Bài 8 xem có phải là tuổi không</h1>-->
+<!--<script>-->
+<!--    let t = parseFloat(prompt('Nhập một số'))-->
+<!--    if (t<120&&t>0){-->
+<!--        if (t%1==0){-->
+<!--            alert(t+'là tuổi của một người')-->
+<!--        }-->
+<!--        else {-->
+<!--            alert('không phải là tuổi của một người')-->
+<!--        }-->
+<!--    }else {-->
+<!--        alert('không phải là tuổi của một người')-->
+<!--    }-->
+
+<!--    // isNaN ? Number.isInteger()-->
+<!--  -->
+<!--</script>-->
+<!--<script>-->
+<!--    // <h2>bài 9</h2>-->
+<!--    let a = parseInt(prompt('nhập cạnh a của tam giác'))-->
+<!--    let b = parseInt(prompt('nhập cạnh b của tam giác'))-->
+<!--    let c = parseInt(prompt('nhập cạnh c của tam giác'))-->
+<!--    if (a > 0 && b > 0 && c > 0) {-->
+<!--        if (a+b>c && b+c>a && c+a > b){-->
+<!--            alert('đây là 3 cạnh của một tam giác')-->
+<!--        }else {-->
+<!--            alert('đây không phải là 3 cạnh của một tam giác')-->
+<!--        }-->
+<!--    }else {-->
+<!--        alert('đây không phải là 3 cạnh của một tam giác')-->
+<!--    }-->
+<!--</script>-->
+<h2>bài 10 tính giá điện</h2>
 <script>
-    let t = parseFloat(prompt('Nhập một số'))
-    if (t<120&&t>0){
-        if (t%1==0){
-            alert(t+'là tuổi của một người')
+        let a = parseInt(prompt('nhập số kWh'))
+
+        if (a<=50){
+            let b = a*1.678
+            alert('giá tiền: '+b +'nghìn đồng')
+        }else if(a<=100){
+            let c = a-50
+            let b = 50*1.678+ c*1.734
+            alert('giá tiền: '+b +'nghìn đồng')
+        }else if(a<=200){
+            let c=a-100
+            let b=107.6+c*2.014
+            alert('giá tiền: '+b +'nghìn đồng')
         }
-        else {
-            alert('không phải là tuổi của một người')
-        }
-    }else {
-        alert('không phải là tuổi của một người')
-    }
 
-    // isNaN ? Number.isInteger()
 </script>
+// bài 10 tính thuế thu nhập cá nhân
 </body>
 </html>

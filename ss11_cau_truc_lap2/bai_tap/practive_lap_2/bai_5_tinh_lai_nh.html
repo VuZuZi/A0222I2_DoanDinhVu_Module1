@@ -1,10 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Tính lãi ngân hàng</title>
 </head>
 <body>
-$END$
+<table>
+    <tr>
+        <td>Nhập số tiền ban đầu:</td>
+        <td><input type="number" id="stbd"></td>
+    </tr>
+    <tr>
+        <td>nhập số tiền lãi hàng tháng(% ):</td>
+        <td><input type="number" id="stl"></td>
+
+    </tr>
+    <tr>
+        <td>nhập thời hạn muốn gửi:</td>
+        <td><input type="number" id="sth"></td>
+    </tr>
+    <tr>
+
+        <td colspan="2">
+            <button onclick="tinh()">Tính</button>
+        </td>
+    </tr>
+</table>
+<script>
+    let a = document.getElementById('stbd').value
+    let b = document.getElementById('stl').value
+    let c = document.getElementById('sth').value
+    console.log(b)
+    console.log(c)
+    document.write(a)
+
+    function tinh() {
+
+        let l = b/100
+        let s = a
+        for (i=1;i<=c;i++){
+            s=s+s*l
+        }
+        console.log(s)
+
+    }
+    // let a = parseInt(prompt('nhập số tiền '))
+    // let b = parseInt(prompt('nhập số lãi '))
+    // let c = parseInt(prompt('nhập số tháng '))
+    // let l = b/100
+    // let s = a
+    //     for (i=1;i<=c;i++){
+    //         s=s+s*l
+    //     }
+    // console.log(s)
+
+</script>
 </body>
 </html>

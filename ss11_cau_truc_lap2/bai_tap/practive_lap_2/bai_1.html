@@ -1,10 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>in ra dãy fibonacci</title>
 </head>
 <body>
-$END$
+<script>
+    let a = 1;
+    let b = 1;
+    let c
+    let count = 1 ;
+    // console.log(a);
+    // let s=1;
+    let sl = parseInt(prompt('số lượng số Fibinacci bạn muốn in'))
+    document.write(a+"<br>")
+    while (count < sl){
+       document.write(a+"<br>")
+       c=a;
+        a=b+c;
+        b=c;
+       count++
+
+   }
+</script>
 </body>
 </html>

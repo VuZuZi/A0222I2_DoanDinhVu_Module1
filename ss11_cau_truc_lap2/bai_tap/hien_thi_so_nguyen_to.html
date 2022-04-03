@@ -6,19 +6,21 @@
 </head>
 <body>
 <SCRIPT>
-    let number = parseInt(prompt('một số bất kì'))
-
-    if (number<2){
-        document.write('không có snt')
-    }else {
-        for(i=2;i<number;i++){
-            if (number/i == 0){
-                document.write(number + " không phải là số nguyên tố");break
+    let snt = parseInt(prompt('nhập 1 số'))
+    let count =0;
+    let number = 1
+        let d = 0
+        for (let i = 2; i < snt; i++) {
+            if (snt % i === 0) {
+                document.write('đây không phải là số nguyên tố')
+                break
+            } else {
+                d = d+1
             }
-
-            }
-
-    }
+        }
+        if (d === snt - 2) {
+            document.write('đây là số nguyên tố ')
+        }
 
 </SCRIPT>
 </body>
