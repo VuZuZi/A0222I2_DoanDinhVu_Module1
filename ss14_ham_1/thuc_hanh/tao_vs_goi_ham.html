@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo và gọi hàm</title>
+</head>
+<body>
+<script>
+    function bx(answer){
+        let result = '';
+        if (answer){
+            result = 'tuyệt vời. chúng ta sẽ chơi một trò chơi'
+        }else {
+            result = 'có lẽ để sau'
+        }
+        return result;
+    }
+    let a = confirm("Shall we play a game?");
+    let b = bx(a);
+    alert(b);
+</script>
+</body>
+</html>

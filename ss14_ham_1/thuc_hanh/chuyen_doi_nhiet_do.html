@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi độ F sang độ C</title>
+</head>
+<body>
+<p>
+    <label>Nhập độ F</label>
+    <input id="inputF" type="number" placeholder="Nhập độ F"
+           oninput="chaythu(this.value)"
+           onchange="chaythu(this.value)">
+</p>
+<p>Celsius: <span id="htc"></span></p>
+<script>
+    function chaythu(dof) {
+        dof = parseFloat(dof)
+        document.getElementById('htc').innerHTML = (dof-32)/1.8 ;
+    }
+</script>
+</body>
+</html>

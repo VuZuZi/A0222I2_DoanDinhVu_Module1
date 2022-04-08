@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ca ro</title>
+</head>
+<body>
+<p id="seebang"></p>
+<script>
+    let array = new Array(20);
+    for (let i = 0; i <array.length ; i++) {
+        array[i]= new Array(20);
+        for (let j = 0; j <array[i].length ; j++) {
+            array[i][j]="";
+        }
+    }
+    chay()
+
+    function chay() {
+        let s = "<table border='1px'>"
+        for (i = 0; i < 10; i++) {
+            s = s + "<tr>"
+            for (j = 0; j < 10; j++) {
+                s = s + "<td onclick='play('+i+','+j+')' style=\"width: 30px;height: 30px\">"+array[i][j] + "</td>"
+            }
+            s = s + "</tr>"
+
+        }
+        s = s + "</table>"
+        document.getElementById("seebang").innerHTML = s;
+    }
+    function
+    document.write(s)
+</script>
+</body>
+</html>

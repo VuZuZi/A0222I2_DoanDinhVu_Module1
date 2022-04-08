@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển</title>
+</head>
+<body>
+<script>
+    // dùng indexof làm từ điểm
+    // let arrENG = ["humans", "school", "class", "teacher"]
+    // let arrVN = ['con người', "trường học", "lớp học", "giáo viên"]
+    // let c = prompt('nhập từ muốn tra: ')
+    // let d= arrENG.indexOf(c)
+    //     if (d!= -1){
+    //         document.write(arrVN[arrENG.indexOf(c)])
+    // }
+
+
+    // dùng for làm tử điển
+
+
+    let arrENG = ["humans", "school", "class", "teacher"]
+    let arrVN = ['con người', "trường học", "lớp học", "giáo viên"]
+    let c = prompt('nhập từ muốn tra: ')
+    let d = -1;
+    for (let i = 0; i < arrENG.length; i++) {
+        if (c === arrENG[i]) {
+            d = i
+            break;
+        }
+    }
+    console.log(arrVN[d])
+
+
+</script>
+</body>
+</html>

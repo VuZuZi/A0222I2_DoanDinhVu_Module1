@@ -7,7 +7,7 @@
 <body>
 <table>
     <tr>
-        <td>Nhập số tiền ban đầu:</td>
+        <td>Nhập số tiền ban đầu(triệu đồng) :</td>
         <td><input type="number" id="stbd"></td>
     </tr>
     <tr>
@@ -27,21 +27,19 @@
     </tr>
 </table>
 <script>
-    let a = document.getElementById('stbd').value
-    let b = document.getElementById('stl').value
-    let c = document.getElementById('sth').value
-    console.log(b)
-    console.log(c)
-    document.write(a)
+
 
     function tinh() {
-
+        let a = parseInt(document.getElementById('stbd').value)
+        let b = parseInt(document.getElementById('stl').value)
+        let c = parseInt(document.getElementById('sth').value)
         let l = b/100
         let s = a
         for (i=1;i<=c;i++){
             s=s+s*l
         }
         console.log(s)
+        alert('số tiền sau '+c+' tháng bạn có được: '+s+' triệu đồng')
 
     }
     // let a = parseInt(prompt('nhập số tiền '))
