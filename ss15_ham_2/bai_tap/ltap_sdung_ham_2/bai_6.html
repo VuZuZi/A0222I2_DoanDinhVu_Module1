@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiểm tra xem nếu số đưa vào có phải là nguyên dương không. Nếu là nguyên dương trả về true, ngược lại trả về false.</title>
+</head>
+<body>
+<script>
+    // function check(value) {
+    //     return ( Number.isInteger(value) && value > 0 )
+    // }
+    // let number = parseInt(prompt('input'))
+    // document.write(check(number))
+    // console.log(check(1)); // true
+    // console.log(check(1.2)); // false
+    // console.log(check(3)); // true
+    // console.log(check(number)); // false
+    function check(value){
+        return (value > 0 && value % 1 == 0)
+    }
+    let b = parseInt(prompt('input'))
+    document.write(check(b))
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3 số nguyên bất kỳ, trả về số nguyên có giá trị nhỏ nhất.</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt('input first number'))
+    let b = parseInt(prompt('input second number'))
+    let c = parseInt(prompt('input third number'))
+    check()
+    alert('gtr nhỏ nhất: '+check())
+    function check() {
+        let min = a
+        if (min > b) {
+            min = b
+        }if (min > c) {
+            min = c
+        }
+        return min
+    }
+</script>
+</body>
+</html>

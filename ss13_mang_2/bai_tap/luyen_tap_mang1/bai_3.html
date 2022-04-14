@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết chương trình khởi tạo mảng số nguyên. Hiển hiện giá trị lớn nhất trong mảng đó.
+        In ra giá trị trung bình của các phần tử trong mảng.</title>
+</head>
+<body>
+<script>
+    var Array = [1, 2, 5, 7, 6, 90, 80, 54, 6, 20]
+    let max = Array[0]
+    let sum =0;
+    for (let i = 0; i < Array.length; i++) {
+        sum = sum + Array[i]
+    }
+    sum =sum / Array.length
+
+        for (let i = 0; i < Array.length; i++) {
+        if (max<Array[i]){
+            max = Array[i]
+        }
+    }
+    document.write('số lớn nhất trong mảng là: '+max+'<br>')
+    document.write('Gtri trung binhg trong mảng là:' + sum)
+
+</script>
+</body>
+</html>

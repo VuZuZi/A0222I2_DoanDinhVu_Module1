@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ktr 1 số có thuộc mảng hay không</title>
+</head>
+<body>
+<script>
+    var Array = [1, 3, 5, 7, 9, -8, -5, -2, -4, -6, 10]
+    let ktr = parseInt(prompt('nhập số muốn kiểm tra'))
+    for (let i = 0; i < Array.length; i++) {
+        let bollen
+        if (Array[i] === ktr){
+
+            document.write('số: ' +ktr+ 'có trong mảng ở vị trí'+(i+1))
+        // }else {
+        //     document.write('số: ' +ktr+ ' không có trong mảng' )
+        // }
+    // }
+</script>
+</body>
+</html>

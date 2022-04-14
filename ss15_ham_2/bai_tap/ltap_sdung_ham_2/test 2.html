@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng quản lý sản phẩm sử dụng hàm</title>
+</head>
+<body>
+<input type="text" id="product" placeholder="Nhập tên">
+<input id="add" type="button" onclick="add()" value="Add New Product"><br>
+<!--<input id="save" type="button" onclick="save()" value="Save" style="display:none;"><br>-->
+<span>Số lượng sản phẩm:  </span><span id="soLuong"></span>
+<p id="display"></p>
+<script>
+    let productList = ["Sam Sung", "Nokia", "Iphone"];
+    display(productList);
+    function display(list) {
+        let tableString = '<table border="1" style="border-collapse: collapse">\n' +
+            '    <tr>\n' +
+            '        <th>STT</th>\n' +
+            '        <th>Name</th>\n' +
+            '        <th>Edit</th>\n' +
+            '        <th>Delete</th>\n' +
+            '    </tr>';
+        for (let i = 0; i < list.length; i++) {
+            tableString += '<tr>\n' +
+                '        <td>' + (i + 1) + '</td>\n' +
+                '        <td>' + list[i] + '</td>\n' +
+                '        <td><input type="button" onclick="edit(' + i + ')" value="edit"></td>\n' +
+                '        <td><input type="button" onclick="deleteProduct(' + i + ')" value="delete"></td>\n' +
+                '    </tr>';
+        }
+        tableString += '</table>'
+        document.getElementById("display").innerHTML = tableString;
+        document.getElementById("soLuong").innerText = list.length;
+    }
+</script>
+</body>
+</html>

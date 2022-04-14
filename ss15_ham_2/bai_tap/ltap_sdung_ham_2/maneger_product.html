@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng quản lý sản phẩm sử dụng hàm</title>
+</head>
+<body>
+
+<input type="text" id="product" placeholder="Nhập tên muốn thêm">
+<button onclick="add()" id="add">Add</button>
+<span>Số lượng sản phẩm: </span><span id="sluong"></span>
+<p id="display"></p>
+
+
+
+
+<script>
+    let productList = ["Sam Sung", "Nokia", "Iphone"];
+    display(productList)
+    function add() {
+        let newsp = document.getElementById('product').value;
+        if (newsp != ""){
+            productList.push(newsp)
+        }else { alert('bạn phải nhập thông tin sản phẩm')}
+        display(productList)
+        document.getElementById('product').value
+
+    }
+    function edit(click) {
+        let editName = prompt("Nhập tên mới",productList[click]);
+        productList[click] = editName;
+        display(productList);
+    }
+
+   function display(list){
+       let bang = "<table border='1 '>\n" +
+           "    <tr>\n" +
+           "        <th>Stt</th>\n" +
+           "        <th>Name</th>\n" +
+           "        <th>Edit</th>\n" +
+           '        <th>Delete</th>\n' +
+           "    </tr>"
+       for (let i = 0; i < list.length; i++) {
+            bang += '<tr>\n' +
+                '    <Td>'+(1+i)+'  </Td>\n' +
+                '    <Td>'+ list[i] +'</Td>\n' +
+                '    <Td><button onclick="edit()">Edit</button></Td>\n' +
+                '    <Td><button onclick="Del()">Del</button> </Td>\n' +
+                '</tr>'
+
+       }
+           bang += "</table>"
+       document.getElementById("display").innerHTML = bang
+       document.getElementById('sluong').innerText = list.length
+   }
+
+</script>
+</body>
+</html>

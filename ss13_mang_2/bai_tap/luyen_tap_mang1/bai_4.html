@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>iết chương trình khởi tạo/nhập vào một mảng số nguyên và đảo ngược các phần tử trong mảng đó.</title>
+</head>
+<body>
+<script>
+     var mang = [1, 2, 5, 7, 6, 90, 80, 54, 6, 20];
+     for (let i = 0; i < mang.length/2; i++) {
+         let a = mang[i]
+         let b = mang[(9-i)]
+         mang.splice(i, 1, b);
+         mang.splice((9-i), 1, a);
+
+         console.log(mang.valueOf())
+     }
+</script>
+</body>
+</html>

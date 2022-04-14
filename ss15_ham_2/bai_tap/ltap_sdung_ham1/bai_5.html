@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tên các ngôi sao</title>
+</head>
+<body>
+<script>
+    let array = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe' , 'Regulus']
+    let array2 = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major' , 'Leo']
+   function run(value){
+       for (let i = 0; i < array.length; i++) {
+           for (let j = 0; j < array2.length; j++) {
+               if (value==array[i]) {
+                   return array2[i];
+               }
+               }
+           }
+       let message = 'không thấy chòm sao';
+       return message;
+   }
+
+   let inputValue=prompt('nhập tên ngôi sao');
+    let check = run(inputValue);
+    if (run(inputValue)){
+        alert(check);
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết hàm truyền vào mảng số nguyên bất kỳ, sau đó đảo ngược mảng số nguyên đó.</title>
+</head>
+<body>
+<script>
+    let a = []
+    let sl = parseInt(prompt('number in array '))
+    for (let i = 0; i < sl; i++) {
+        a.push(parseInt(prompt('input')))
+    }
+    document.write('mảng bạn nhập có '+sl+' giá trị'+'<br>'+'Array['+a+']'+'<br>')
+    let first = 0
+    let last = a.length-1
+    while (last>first){
+        let b= a[first]
+        a[first]=a[last]
+        a[last]=b
+        first++
+        last--
+    }
+    document.write('mảng đảo: '+'<br>'+ 'Array['+a+']')
+</script>
+</body>
+</html>
