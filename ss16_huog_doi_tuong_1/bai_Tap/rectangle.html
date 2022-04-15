@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả hình chữ nhật </title>
+</head>
+<body>
+<h1><p id="text"></p></h1>
+<canvas id="hthhv" width="5000px" height="5000px" style="border:3px solid #d3d3d3;"></canvas>
+<script>
+    function Rectangle(dai,rong){
+        this.dai = dai;
+        this.rong = rong;
+        this.dtich = function (){return (dai*rong)}
+        this.chuvi = function (){return (2*(dai * rong))}
+        this.canvass = function () {
+            let c = document.getElementById("hthhv");
+            let ctx = c.getContext("2d");
+            ctx.beginPath();
+            ctx.rect(10,10,dai,rong);
+            ctx.stroke();
+        }
+    }
+
+
+    let rectangle = new Rectangle(prompt('nhập chiều dài hcn *px'),prompt('nhập chiều rộng hcn *px'))
+    let Area = rectangle.dtich();
+    let chvi = rectangle.chuvi();
+    let dai = rectangle.dai
+    let rong = rectangle.rong
+    rectangle.canvass()
+
+    document.getElementById('text').innerText = 'chiều dài: '+dai+'chiều rộng: '+rong+'chu vi: '+chvi+'diện tích: '+Area
+
+
+</script>
+</body>
+</html>

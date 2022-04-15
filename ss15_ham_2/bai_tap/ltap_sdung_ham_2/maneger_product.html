@@ -5,32 +5,40 @@
     <title>Ứng dụng quản lý sản phẩm sử dụng hàm</title>
 </head>
 <body>
-
 <input type="text" id="product" placeholder="Nhập tên muốn thêm">
-<button onclick="add()" id="add">Add</button>
+<button onclick="add()" id="add">Add</button><br>
 <span>Số lượng sản phẩm: </span><span id="sluong"></span>
 <p id="display"></p>
-
-
-
-
 <script>
     let productList = ["Sam Sung", "Nokia", "Iphone"];
     display(productList)
+    // let editId =-1;
     function add() {
         let newsp = document.getElementById('product').value;
+        // kiểm tra đk có tên hay không
         if (newsp != ""){
             productList.push(newsp)
         }else { alert('bạn phải nhập thông tin sản phẩm')}
         display(productList)
         document.getElementById('product').value
-
     }
-    function edit(click) {
-        let editName = prompt("Nhập tên mới",productList[click]);
-        productList[click] = editName;
+
+    function edit(index) {
+        let editName = prompt("Nhập tên mới",productList[index]);
+        productList[index] = editName;
         display(productList);
     }
+
+    function Del(index){
+        let conf = confirm('bạn có muốn xóa '+ productList[index] )
+        if (conf){
+            productList.splice(index,1)
+        }
+        display(productList)
+    }
+
+
+
 
    function display(list){
        let bang = "<table border='1 '>\n" +
@@ -44,8 +52,8 @@
             bang += '<tr>\n' +
                 '    <Td>'+(1+i)+'  </Td>\n' +
                 '    <Td>'+ list[i] +'</Td>\n' +
-                '    <Td><button onclick="edit()">Edit</button></Td>\n' +
-                '    <Td><button onclick="Del()">Del</button> </Td>\n' +
+                '    <Td><button onclick="edit('+i+')">Edit</button></Td>\n' +
+                '    <Td><button onclick="Del('+i+')">Del</button> </Td>\n' +
                 '</tr>'
 
        }

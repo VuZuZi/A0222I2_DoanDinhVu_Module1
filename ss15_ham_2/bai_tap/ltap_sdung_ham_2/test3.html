@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quản lý sản phẩm</title>
+</head>
+<body>
+<input type="text" id="spm" placeholder="nhập sản phẩm mới muốn thêm">
+<button onclick="them()">Thêm</button>
+<br>
+<span>Số lượng sản phẩm</span><span id="sl"></span>
+<p id="display"></p>
+<table border="1">
+    <tr>
+        <th>Stt</th>
+        <th>Tên sản phẩm</th>
+        <th>Sửa</th>
+        <th>Xóa</th>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>
+            <button onclick="sua()"></button>
+        </td>
+        <td>
+            <button onclick="xoa()">Xóa</button>
+        </td>
+    </tr>
+</table>
+<script>
+    let spham = ['sơ mi trắng', 'sơ mi màu', 'quần jean', 'quần tây'];
+
+    function display(list)
+    {
+        let bang = '<table border="1">\n' +
+            '    <tr>\n' +
+            '        <th>Stt</th>\n' +
+            '        <th>Tên sản phẩm</th>\n' +
+            '        <th>Sửa</th>\n' +
+            '        <th>Xóa</th>\n' +
+            '    </tr>'
+        for (let i = 0; i < list.length; i++) {
+            bang += '<tr>\n' +
+                '        <td>' + (i + 1) + '</td>\n' +
+                '        <td>'+ list[i] +'</td>\n' +
+                '        <td><button onclick="sua('+i+')"></button> </td>\n' +
+                '        <td><button onclick="xoa('+i+')">Xóa</button></td>\n' +
+                '    </tr>'
+    }}
+</script>
+</body>
+</html>

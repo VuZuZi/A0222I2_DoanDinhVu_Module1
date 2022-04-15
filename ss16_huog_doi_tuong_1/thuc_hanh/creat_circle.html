@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Circle</title>
+</head>
+<body>
+<SCRIPT>
+    let Hinhtron = function (r){
+        this.r = r;
+        this.getr=function (){return this.r}
+        this.getArea = function (){return Math.PI * r * r }
+    }
+    let hinhtron = new Hinhtron(2)
+    let r = hinhtron.getr()
+    let Area = hinhtron.getArea()
+    alert('hình trong với bán kính: '+r+'  có diện tích: '+ Area)
+
+</SCRIPT>
+</body>
+</html>
