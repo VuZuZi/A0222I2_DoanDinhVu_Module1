@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả điện thoại</title>
+</head>
+<body>
+<script>
+    class mobie {
+        constructor(pin, mes, mesindoc, messent, sent, checkpow, seemes, seesent) {
+
+        //Có một thông số về trạng thái pin tính bằng đơn vị số nguyên (tối đa 100 đv)
+        this.pin = pin;
+
+        // kiểm tra pin
+        this.checkpin = function () {
+            if (this.pin > 0 && this.pin < 101) {
+                return true
+            } else { return false }}
+        //Có một vùng nhớ dùng để lưu tin nhắn đang soạn thảo.
+        this.mes = function (){
+            prompt('nhập tin nhắn')
+        };
+        // Có một vùng nhớ dùng để lưu tin nhắn trong hộp thư đến.
+        this.dowsent = function (){
+            alert('hộp thư đến')
+        };
+        //Có một vùng nhớ dùng để lưu tin nhắn đã gửi.
+        this.messent = function (){
+            alert('tin nhắn đã gửi')
+        };
+        // Có chức năng kiểm tra trạng thái điện thoại bật hay tắt.
+        this.check = function (){}
+        //Có chức năng xạc pin điện thoại.
+        this.sac = function (){}
+        //Có chức năng soạn tin nhắn.
+        //Có chức năng nhận tin nhắn từ một chiếc mobile khác.
+        //Có chức năng gửi tin nhắn tới một chiếc mobile khác.
+        //Có chức năng xem tin trong hộp thư đến.
+        this.seemess = function (){}
+        //Có chức năng xem tin đã gửi.
+
+        this.turnon = function () {
+            alert('điện thoại đã được bật')
+        }
+        this.onoff = function () {
+            alert('điện thoại đã tắt')
+        };
+
+        // kiểm tra pin
+        this.checkpow = function (){
+
+        }
+        //sạc pin
+        this.power = function (){}
+        this.sent = sent;
+        this.seemess = seemes;
+        this.seesent = seesent;
+        }
+    }
+
+</script>
+</body>
+</html>

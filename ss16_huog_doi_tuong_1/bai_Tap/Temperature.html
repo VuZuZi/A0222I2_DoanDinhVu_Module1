@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả Temperature</title>
+</head>
+<body>
+<script>
+    function Temperature(c) {
+        if (c < -273) {
+            alert('nhiệt độ c>-273')
+            return
+        } else
+            this.c = c;
+        this.f = function () {
+            return ((c * 9 / 5) + 32)
+        }
+        this.k = function () {
+            return (c + 273.15)
+        }
+    }
+
+    let temperature = new Temperature(25)
+    let doc = temperature.c;
+    let dof = temperature.f();
+    let dok = temperature.k();
+    document.write(doc + ' độ C = ' + dof + ' độ F = ' + dok + ' độ K')
+</script>
+</body>
+</html>

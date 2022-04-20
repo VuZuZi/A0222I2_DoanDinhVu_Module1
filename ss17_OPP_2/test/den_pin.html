@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đèn pin</title>
+</head>
+<body>
+<SCRIPT>
+    class pin {
+        constructor(nangluong) {
+            this.datnangluong = function (nangluong) {
+                this.nangluong = nangluong
+            }
+            this.nhannangluong = function (){
+                return this.nangluong
+            }
+            this.giamnangluong = function (){
+                if (nangluong>0){
+                    nangluong --
+                }
+            }
+        }
+    }
+    class denpin {
+        constructor(pin,trangthai) {
+        this.trangthai = trangthai;
+        this.pin = pin
+        }
+    datpin(pin){
+            this.pin = pin
+    }
+    nhanpin(){
+            return this.pin.nhannangluong()
+    }
+    turnon(){
+            this.status = true
+            this.pin.giamnangluong()
+    }
+    turnoff(){
+            this.status = false
+    }
+    light(){
+            if (this.status){
+                alert('đèn pin đang bật')
+            }else {
+                alert('đèn pin đang tắt')
+            }
+    }
+    }
+    let pin = new pin()
+        pin.datnangluong(10)
+    let denpin = new denpin()
+        denpin.datnangluong(pin )
+</SCRIPT>
+</body>
+</html>
