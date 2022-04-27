@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tele</title>
+</head>
+<body>
+<!--<table border="1px">-->
+<!--    <tr>-->
+<!--        <th>-->
+<!--            <span id="statuss"></span>-->
+<!--        </th>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <th>-->
+<!--            <span id="tivi"></span>-->
+<!--        </th>-->
+<!--        <th>-->
+<!--            <span id="volumee"></span>-->
+<!--        </th>-->
+
+<!--    </tr>-->
+
+<!--</table>-->
+<table>
+    <tr>
+        <td>
+            <button onclick="remot.switchOn()">On</button>
+        </td>
+        <td>
+            <button onclick="remot.switchOff()">Off</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="remot.switchUpVol()">+</button>
+        </td>
+        <td>
+            <button onclick="remot.switchDownVol()">-</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="remot.switchUpC()">Up</button>
+        </td>
+        <td>
+            <button onclick="remot.switchDownC()">Down</button>
+        </td>
+    </tr>
+</table>
+<script>
+
+    class Television {
+        constructor() {
+            this.status = false
+            this.channel = 3
+            this.vol = 5
+        }
+
+
+
+        isChannel() {
+            console.log('kênh hiện tại: ' + this.channel)
+        }
+
+        upChannel() {
+            if (this.status) {
+                if (this.channel == 10) {
+                    this.channel = 1
+                    this.isChannel()
+                }
+                if (this.channel < 10) {
+                    this.channel++
+                    this.isChannel()
+                }
+            } else {
+                alert('TiVi đang tắt không chuyển được kênh')
+            }
+        }
+
+        downChannel() {
+            if (this.status == true) {
+                if (this.channel == 1) {
+                    this.channel = 10
+                    this.isChannel()
+                }
+                if (this.channel > 1) {
+                    this.channel--
+                    this.isChannel()
+                }
+            } else {
+                alert('TiVi đang tắt không chuyển được kênh')
+            }
+
+        }
+
+        isVolume() {
+            console.log('âm lượng hiện tại: ' + this.vol)
+        }
+
+        isOn() {
+            if (status) {
+                console.log('Tivi đang bật')
+            } else {
+                console.log('Tivi đang tắt')
+            }
+        }
+
+        turnOn() {
+            this.status = true
+            console.log('Tivi đang bật')
+        }
+
+        turnOff() {
+            this.status = false
+            console.log('Tivi đang tắt')
+        }
+
+        turnUpVol() {
+            if (this.status == true){
+                if (this.vol == 10){
+                    console.log('Âm lượng:'+this.vol)
+                    alert('Âm lượng tối đa là 10')
+                }
+                else {
+                    this.vol++
+                    console.log('Âm lượng:' + this.vol)
+                }
+            }
+            else {
+                alert('Tivi off')
+            }
+         }
+
+        turnDownVol() {
+            if (this.status){
+                if (this.vol == 0){
+                    console.log('Âm lượng:'+this.vol)
+                    alert('Âm lượng tối thiểu là 0')
+                }else {
+                    this.vol--
+                    console.log('Âm lượng:' + this.vol)
+                }
+            }
+            else {
+                alert('Tivi Off')
+            }
+          }
+    }
+
+    class remote {
+        constructor() {
+
+        }
+
+        switchUpC() {
+            this.value.upChannel()
+        }
+
+        switchDownC() {
+            this.value.downChannel()
+        }
+
+        switchUpVol() {
+            this.value.turnUpVol()
+        }
+
+        switchDownVol() {
+            this.value.turnDownVol()
+        }
+
+        switchOn() {
+            console.log('click on TiVi')
+            this.value.turnOn()
+
+
+        }
+
+        switchOff() {
+            console.log('click off TiVi')
+            this.value.turnOff()
+        }
+
+        connectToTivi(value) {
+            this.value = value
+        }
+    }
+
+    let Sony = new Television()
+    let remot = new remote()
+    Sony.isOn()
+    remot.connectToTivi(Sony)
+
+    // document.getElementById('statuss').innerText = Sony.status
+    // document.getElementById('tivi').innerText = Sony.channel
+    // document.getElementById('volumee').innerText = Sony.vol
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bóng đèn</title>
+</head>
+<body>
+<script>
+class BongDen {
+    constructor() {
+        this.status = false
+    }
+    turnOn(){
+        this.status = true
+        alert('bóng đèn sáng')
+    }
+    turnOff(){
+        this.status = false
+        alert('bóng đèn tắt')
+    }
+}
+class CongTac {
+    constructor() {
+        this.status = false
+    }
+    switchOn(){
+        this.status = true
+        alert('công tắc đã bật')
+        this.lamp.turnOn()
+    }
+    switchOff(){
+        this.status = false
+        this.lamp.turnOff()
+    }
+    connectToLamp(lamp){
+        this.lamp = lamp
+    }
+}
+let bongden = new BongDen()
+let cong = new CongTac()
+cong.connectToLamp(bongden)
+cong.switchOn()
+</script>
+</body>
+</html>
