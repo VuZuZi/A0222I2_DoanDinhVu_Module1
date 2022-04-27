@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<SCRIPT>
+    let a = parseInt(prompt('nhập tiền lương*triệu đồng'))
+    let b
+    let c
+    if (a >= 15) {
+        b = (a / 100 * 20)
+        c = a - b;
+        alert('thuế 15tr trở lên = 20%  '+'lương sau thuế: ' + c + ' triệu.  ' + 'tổng thuế: ' + b + ' triệu')
+    } else if (a >= 7 && a < 15){
+        b=(a/100*10)
+        c = a - b;
+        alert('thuế 7-15tr = 10%  '+'lương sau thuế: ' + c + ' triệu.  ' + 'tổng thuế: ' + b + ' triệu')
+    }else {
+        b=(a/100*5)
+        c = a - b;
+        alert('thuế dưới 7tr = 5%  '+'lương sau thuế: ' + c + ' triệu.  ' + 'tổng thuế: ' + b + ' triệu')
+    }
+</SCRIPT>
+</body>
+</html>

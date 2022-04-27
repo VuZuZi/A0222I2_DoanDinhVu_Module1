@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phân số a/b</title>
+</head>
+<body>
+<script>
+    let a = [1, 2, 3, 4, 5]
+    let b = [5, 4, 3, 2, 1]
+    let c = a[0]/b[0]
+    let d = 0;
+    for (let i = 0; i < a.length; i++) {
+        if(c<(a[i]/b[i])){
+            c=a[i]/b[i]
+            d = i
+        }
+
+            }
+    document.write('maxFuntion = '+c)
+    document.write('<br>')
+    document.write('chỉ số index = '+d)
+
+
+</script>
+</body>
+</html>
